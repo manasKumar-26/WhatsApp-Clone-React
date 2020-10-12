@@ -20,7 +20,6 @@ code {
   display: grid;
   place-items: center;
   height: 100vh;
-  /* background-color: #d7dcd8; */
   background: linear-gradient(180deg, #009688 15%, #d7dcd8 15%);
 }
 
@@ -31,4 +30,95 @@ code {
   width: 90vw;
   margin-top: -50px;
   box-shadow: -1px 4px 20px -6px rgb(56 53 53 / 75%);
+}
+.WaitProfile {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: #009688;
+  /* animation-name: rotateBox, size, wide;
+  animation-duration: 0.8s, 0.8s, 0.8s;
+  animation-iteration-count: infinite, infinite, infinite;
+  animation-direction: alternate, alternate, alternate; */
+}
+.loader > .MuiSvgIcon-root {
+  font-size: xx-large;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.login {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.login_container {
+  padding: 100px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px;
+}
+.login_container > img {
+  object-fit: contain;
+  height: 100px;
+  margin-bottom: 40px;
+}
+.login_container > button {
+  margin-top: 50px;
+  text-transform: inherit !important;
+  background-color: #009688;
+  color: white;
 }
