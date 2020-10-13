@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../chat.css";
+import Message from "./message";
 import { Avatar, IconButton } from "@material-ui/core";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -58,18 +59,8 @@ function Chat(props) {
         </div>
       </div>
       <div className="chat_header_body">
-        {messages.map((message) => (
-          <p
-            className={`chat_message ${
-              message.email === user.email && "chat_reciver"
-            }`}
-          >
-            <span className="chat_name">{message.name}</span>
-            {message.message}
-            <span className="chat_timeStamp">
-              {message.timestamp.substring(0, 10)}
-            </span>
-          </p>
+        {messages.map((message, index) => (
+          <Message message={message} user={user} key={index} />
         ))}
       </div>
       <div className="chat_footer">

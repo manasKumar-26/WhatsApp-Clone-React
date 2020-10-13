@@ -55,7 +55,11 @@ function App() {
   return (
     <div className="App">
       <div className="AppContainer">
-        <Sidebar lastmessage={messages[messages.length - 1]} user={user} />
+        <Sidebar
+          lastmessage={messages[messages.length - 1]}
+          user={user}
+          HandleLoggedInUser={HandleLoggedInUser}
+        />
         <Chat messages={messages} user={user} />
       </div>
     </div>

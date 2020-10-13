@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   min-width: 10vw;
+  position: relative;
 }
 .side_right > .MuiSvgIcon-root {
   margin-right: 2vw;
@@ -66,4 +67,22 @@
 }
 .chatInfo {
   margin-left: 15px;
+}
+.logout {
+  position: absolute;
+  top: 35px;
+  left: 7em;
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.2s;
+}
+.logout > button {
+  text-transform: inherit !important;
+  background-color: #009688;
+  color: white;
+}
+.disp {
+  opacity: 1;
+  z-index: 5;
+  transition: all 0.2s;
 }
